@@ -14,6 +14,7 @@ export default function Login({ token }) {
   const isLogin = () => {
     if (token == "") {
       return (
+      <li className="relative m-4 border-2 border-solid p-8 rounded-md bg-white drop-shadow-lg">
         <div>
           <p className={styles.textTitle}>LOGIN HERE</p>
           <div
@@ -38,6 +39,7 @@ export default function Login({ token }) {
             <button className="p-2 bg-yellow-500 hover:text-indigo-500 rounded-br-lg rounded-tl-lg drop-shadow-lg" onClick={() => login()} > LOGIN </button>
           </div>
         </div>
+      </li>
       );
     } else {
       return (
