@@ -17,15 +17,6 @@ export default function Login({ token }) {
       <li className="relative m-4 border-2 border-solid p-8 rounded-md bg-white drop-shadow-lg">
         <div>
           <p className={styles.textTitle}>LOGIN HERE</p>
-          <div
-            style={{ marginBottom: "10px", marginTop: "30px" }}
-            className="rows">
-            <p className={styles.textTitle}>RESGISTER HERE</p>
-            <button className="p-2 bg-yellow-500 hover:text-indigo-500 rounded-br-lg rounded-tl-lg drop-shadow-lg" onClick={() => {
-                router.push("/register");
-              }}
-              className="p-2 bg-yellow-500 hover:text-indigo-500 rounded-br-lg rounded-tl-lg drop-shadow-lg"> REGISTER </button>
-          </div>
           <div className="column">
             <input
               onChange={(e) => setUsername(e.target.value)}
@@ -37,6 +28,15 @@ export default function Login({ token }) {
               className={styles.input}
               placeholder="Password"></input>
             <button className="p-2 bg-yellow-500 hover:text-indigo-500 rounded-br-lg rounded-tl-lg drop-shadow-lg" onClick={() => login()} > LOGIN </button>
+          </div>
+          <div
+            style={{ marginBottom: "10px", marginTop: "30px"}}
+            className="rows">
+            <p className={styles.textTitle2}>RESGISTER HERE</p>
+            <button className="p-2 bg-yellow-500 hover:text-indigo-500 rounded-br-lg rounded-tl-lg drop-shadow-lg" onClick={() => {
+                router.push("/register");
+              }}
+              className="p-2 bg-yellow-500 hover:text-indigo-500 rounded-br-lg rounded-tl-lg drop-shadow-lg"> REGISTER </button>
           </div>
         </div>
       </li>
