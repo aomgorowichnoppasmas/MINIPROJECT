@@ -30,7 +30,7 @@ export default function Register({ token }) {
   };
   return (
     <Layout>
-      <li className="relative m-4 border-2 border-solid p-8 rounded-md bg-white drop-shadow-lg">
+      <div className="relative m-4 border-2 border-solid p-8 rounded-md bg-white drop-shadow-lg">
       <p style={{ marginLeft: "10px" }} className={styles.textTitle}>REGISTER</p>
       <div className="column">
         <input
@@ -62,7 +62,7 @@ export default function Register({ token }) {
           </input>
         <button className="p-2 bg-yellow-500 hover:text-indigo-500 rounded-br-lg rounded-tl-lg drop-shadow-lg" onClick={() => register() }>REGISTER</button>
       </div>
-      </li>
+      </div>
     </Layout>
   );
 }

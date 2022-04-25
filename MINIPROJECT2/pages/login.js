@@ -14,7 +14,7 @@ export default function Login({ token }) {
   const isLogin = () => {
     if (token == "") {
       return (
-      <li className="relative m-4 border-2 border-solid p-8 rounded-md bg-white drop-shadow-lg">
+      <div className="relative m-4 border-2 border-solid p-8 rounded-md bg-white drop-shadow-lg">
         <div>
           <p className={styles.textTitle}>LOGIN HERE</p>
           <div className="column">
@@ -39,7 +39,7 @@ export default function Login({ token }) {
               className="p-2 bg-yellow-500 hover:text-indigo-500 rounded-br-lg rounded-tl-lg drop-shadow-lg"> REGISTER </button>
           </div>
         </div>
-      </li>
+      </div>
       );
     } else {
       return (

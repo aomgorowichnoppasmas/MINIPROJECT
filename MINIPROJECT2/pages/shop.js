@@ -14,9 +14,14 @@ const Shop = ({ token }) => {
     setUserid(localStorage.getItem("userid"));
   });
   const productList = [
-    { id: "fixedblade", productName: "Bastinelli Creations Sin", price: 400 },
-   { id: "dagger", productName: "bastinelli M390", price: 350 },
-  
+    { id: "PD1", productName: "Bastinelli Creations Sin", price: 400 },
+    { id: "PD2", productName: "bastinelli M390", price: 350 },
+    { id: "PD3", productName: "Strider sng", price: 389 },
+    { id: "PD4", productName: "Tom Klein hydra", price: 450 },
+    { id: "PD5", productName: "Microtech Halo", price: 300 },
+    { id: "PD6", productName: "Zero Tolerance ZT0350", price: 450 },
+    { id: "PD7", productName: "Hinderer xm-18", price: 350 },
+    { id: "PD8", productName: "Spyderco para3", price: 260  },
   ];
   const addtocart = async (item) => {
     console.log(item);
@@ -52,6 +57,7 @@ const Shop = ({ token }) => {
           <div className={styles.productList}>
             {productList.map((item) => {
               return (
+                <div className="relative m-4 border-2 border-solid p-8 rounded-md bg-white drop-shadow-lg">
                 <div key={item.id}>
                   <img
                     className={styles.productImage}
@@ -64,6 +70,7 @@ const Shop = ({ token }) => {
                       onClick={() => addtocart(item)}
                       className={styles.addCartButton}>ADD PRODUCT IN CART</button>
                   </div>
+                </div>
                 </div>
               );
             })}
